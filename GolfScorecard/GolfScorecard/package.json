@@ -1,0 +1,9 @@
+{
+  "name": "golf-scorecard",
+  "version": "0.0.0",
+  "description": "GolfScorecard",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}
