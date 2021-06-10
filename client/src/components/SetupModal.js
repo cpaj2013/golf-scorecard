@@ -4,13 +4,21 @@ import {
     Modal,
     ModalHeader,
     ModalBody,
-    ModalFooter
+    ModalFooter,
+    Form,
+    FormGroup,
+    Label,
+    Input
 } from 'reactstrap';
 
 const SetupModal = (props) => {
     const {
         className
     } = props;
+
+    const [players, setPlayers] = useState(2);
+
+    const [rounds, setRounds] = useState(9);
 
     const [modal, setModal] = useState(false);
 
@@ -24,12 +32,36 @@ const SetupModal = (props) => {
                     Game Setup
                 </ModalHeader>
                 <ModalBody>
-                    Random text
+                    <Form>
+                        <FormGroup row>
+                            <Label for="numPlayers">Number of Players</Label>
+                            <Input type="select" onChange={e => setPlayers(e.target.value)} name="numPlayers" id="numPlayersSelect">
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </Input>
+                        </FormGroup>
+                        <FormGroup row>
+                            <Label for="numRounds">Number of Rounds</Label>
+                            <Input type="select" onChange={e => setRounds(e.target.value)} name="numRounds" id="numRoundsSelect">
+                                <option>9</option>
+                                <option>18</option>
+                            </Input>
+                        </FormGroup>
+                    </Form>
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" onClick={toggle}>Submit</Button>
-                    <Button color="secondary" onClick={toggle}>Cancel</Button>
+                    <Button color="primary" onClick={e => {
+                        props.setSettings(players, rounds);
+                        e.preventDefault();
+                        toggle();
+                    }}>Submit</Button>
+                    <Button color="secondary" onClick={toggle}>Done</Button>
+                 
                 </ModalFooter>
+           
             </Modal>
         </div>
     );
