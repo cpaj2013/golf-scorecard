@@ -1,3 +1,11 @@
+/**
+ *  Golf Scorecard v1.0.0
+ *  Created by Chris Pajtas
+ * 
+ *  Main app class that brings all the components together
+ * 
+ * */
+
 import './App.css';
 import Scorecard from './components/Scorecard';
 import RulesModal from './components/RulesModal';
@@ -31,6 +39,9 @@ class App extends Component {
         return (
             <div className="App">
                 <Container>
+                    <Row>
+                        <Col>Golf Scorecard</Col>
+                    </Row>
                     <Row>
                         <Col><SetupModal setSettings={this.setSettings}/></Col>
                         <Col><RulesModal /></Col>

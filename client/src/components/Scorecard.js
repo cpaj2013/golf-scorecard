@@ -1,4 +1,10 @@
-/* Contains the scorecard views and data */
+/**
+ *  Golf Scorecard v1.0.0
+ *  Created by Chris Pajtas
+ *
+ *  Scorecard component that allows users to enter their score
+ *
+ * */
 import React, { Component } from 'react';
 
 const Scorecard = (props) => {

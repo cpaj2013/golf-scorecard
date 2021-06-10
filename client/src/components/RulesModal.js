@@ -1,3 +1,11 @@
+
+/**
+ *  Golf Scorecard v1.0.0
+ *  Created by Chris Pajtas
+ *
+ *  Rules modal that explains the rules of Golf
+ *
+ * */
 import React, { useState, Component } from 'react';
 import {
     Button,

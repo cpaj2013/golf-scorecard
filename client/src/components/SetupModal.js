@@ -1,3 +1,11 @@
+/**
+ *  Golf Scorecard v1.0.0
+ *  Created by Chris Pajtas
+ *
+ *  Setup modal component that lets user manage settings
+ *
+ * */
+
 import React, { useState, Component } from 'react';
 import {
     Button,
@@ -58,7 +66,7 @@ const SetupModal = (props) => {
                         e.preventDefault();
                         toggle();
                     }}>Submit</Button>
-                    <Button color="secondary" onClick={toggle}>Done</Button>
+                    <Button color="secondary" onClick={toggle}>Cancel</Button>
                  
                 </ModalFooter>
            
