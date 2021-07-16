@@ -57,7 +57,7 @@ const SetupModal = (props) => {
                                 <option>9</option>
                                 <option>18</option>
                             </Input>
-                        </FormGroup>
+                         </FormGroup>
                     </Form>
                 </ModalBody>
                 <ModalFooter>
